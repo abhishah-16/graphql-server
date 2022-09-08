@@ -4,9 +4,9 @@ const _ = require('lodash')
 
 // dummy data
 const books = [
-    { name: 'aaaa', genre: 'bbb', id: 1 },
-    { name: 'aaa', genre: 'bb', id: 2 },
-    { name: 'aa', genre: 'b', id: 3 }
+    { name: 'aaaa', genre: 'bbb', id: '1' },
+    { name: 'aaa', genre: 'bb', id: '2' },
+    { name: 'aa', genre: 'b', id: '3' }
 ]
 
 const BookType = new GraphQLObjectType({
@@ -35,7 +35,8 @@ const RootQuery = new GraphQLObjectType({
                 }
             },
             resolve(parent, args) {
-               return _find(books, { id: args.id })
+                const book = _.find(books, { id: args.id })
+                return book
             }
         }
     }
