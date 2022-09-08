@@ -7,6 +7,6 @@ app.use('/graphql', graphqlHTTP({
     schema,
     graphiql:true
 }))
-app.listen(4000, () => {
-    console.log('server is running on 4000');
+app.listen(5000, () => {
+    console.log('server is running on 5000');
 })
