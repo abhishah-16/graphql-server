@@ -3,13 +3,13 @@ const _ = require('lodash')
 const Book = require('../models/book')
 const Author = require('../models/author')
 const {
-    GraphQLObjectType,
     GraphQLString,
-    GraphQLSchema,
     GraphQLID,
     GraphQLInt,
     GraphQLList,
-    GraphQLNonNull } = graphQL
+    GraphQLNonNull,
+    GraphQLObjectType,
+    GraphQLSchema } = graphQL
 
 // book type
 const BookType = new GraphQLObjectType({
